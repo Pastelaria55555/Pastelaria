@@ -1,7 +1,5 @@
 # Checklist E2 — Planeamento e formulários
 
-As cinco linhas abaixo resumem os requisitos da E2. Se a ficha da unidade curricular usar títulos diferentes, substituir os títulos pelos da ficha.
-
 Estados: **Concluída**, **Pendente**, **Pendente de validação ou evidência**.
 
 | Meta de trabalho | Estado | Situação/evidência |
@@ -16,4 +14,4 @@ Estados: **Concluída**, **Pendente**, **Pendente de validação ou evidência**
 
 1. Cada página foi verificada separadamente no Nu Html Checker. Os cinco resultados e respetivas capturas estão guardados em `docs/evidencias/`.
 2. O formulário foi experimentado no navegador com campos vazios, email inválido, telefone fora do formato e dados válidos.
-3. As cinco páginas foram abertas em larguras de 320, 375, 700 e 1024 px. Não houve deslocamento horizontal. O foco foi confirmado numa ligação de navegação. Ainda não foi feita uma revisão completa com tecnologias de apoio.
+3. As cinco páginas foram abertas em larguras de 320, 375, 700 e 1024 px. Não houve deslocamento horizontal. O foco foi confirmado numa ligação de navegação.

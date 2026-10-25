@@ -18,7 +18,7 @@ Foi feita uma pesquisa nos cinco ficheiros HTML por elementos `<style>` e atribu
 
 ## Resultado
 
-**Ponto 1 da E3: cumprido.** Esta verificação limita-se à ligação da folha de estilos e à ausência de CSS em linha. A validação formal dos ficheiros HTML e CSS será registada separadamente quando forem verificados os critérios correspondentes da E3.
+**Ponto 1 da E3: cumprido.** Esta verificação confirma a ligação da folha de estilos e a ausência de CSS em linha. A validação formal dos ficheiros HTML e CSS está registada no ponto 5 deste relatório.
 
 ## Ponto 3 — Organização da folha CSS
 
