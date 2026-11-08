@@ -1,29 +1,12 @@
-/* 1. Cores e efeitos partilhados pelo site */
-:root {
-  --cream: #fff8eb;
-  --paper: #fffdf8;
-  --brown: #4a2b20;
-  --brown-light: #795342;
-  --orange: #c85b27;
-  --orange-dark: #9e3f18;
-  --gold: #e7a642;
-  --line: #ead8c0;
-  --shadow: 0 12px 30px rgba(74, 43, 32, .09);
-}
-
-/* 2. Regras base e estrutura geral */
+/* Modelo de caixa: largura, espaço interior e borda são calculados juntos. */
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--brown);
+  background: #fffdf8;
+  color: #4a2b20;
   font-family: Georgia, 'Times New Roman', serif;
   line-height: 1.6;
 }
@@ -35,14 +18,15 @@ img {
 }
 
 .container {
-  width: min(1120px, calc(100% - 2rem));
-  margin-inline: auto;
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
-/* 3. Cabeçalho e navegação */
+/* Cabeçalho e navegação */
 .site-header {
-  background: var(--cream);
-  border-bottom: 1px solid var(--line);
+  background: #fff8eb;
+  border-bottom: 1px solid #ead8c0;
 }
 
 .header-content,
@@ -50,7 +34,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .header-content {
@@ -60,46 +44,30 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: .7rem;
-  color: var(--brown);
+  gap: 10px;
+  color: #4a2b20;
   text-decoration: none;
   font-size: 1.1rem;
 }
 
 .brand strong {
   display: block;
-  color: var(--orange-dark);
+  color: #9e3f18;
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  flex: 0 0 50px;
   width: 50px;
   height: 50px;
-  transition: transform .18s ease, filter .18s ease;
 }
 
 .brand-mark img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-}
-
-.brand:hover .brand-mark,
-.brand:focus-visible .brand-mark {
-  transform: rotate(-7deg) scale(1.1);
-  filter: drop-shadow(0 4px 5px rgba(74, 43, 32, .45));
-}
-
-.brand:active .brand-mark {
-  transform: rotate(5deg) scale(.88);
-  filter: drop-shadow(0 1px 2px rgba(74, 43, 32, .35));
 }
 
 .nav-list {
   display: flex;
-  gap: .4rem;
+  gap: 6px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -107,68 +75,70 @@ img {
 
 .nav-list a {
   display: block;
-  padding: .55rem .8rem;
-  color: var(--brown);
+  padding: 9px 13px;
+  color: #4a2b20;
   text-decoration: none;
   border-radius: 6px;
 }
 
 .nav-list a:hover,
 .nav-list a.active {
-  background: var(--orange-dark);
+  background: #9e3f18;
   color: #fff;
 }
 
-/* 4. Página inicial, chamadas e botões */
+/* Página inicial e botões */
 .hero {
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  padding-block: 5rem;
+  padding: 80px 0;
 }
 
 .eyebrow {
-  margin: 0 0 .65rem;
-  color: var(--orange-dark);
-  font: 700 .76rem/1.3 Arial, sans-serif;
-  letter-spacing: .14em;
+  margin: 0 0 10px;
+  color: #9e3f18;
+  font-family: Arial, sans-serif;
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .hero h1,
 .page-intro h1 {
   max-width: 650px;
-  margin: 0 0 1rem;
-  font-size: clamp(2.4rem, 6vw, 4.7rem);
-  line-height: 1.05;
+  margin: 0 0 16px;
+  font-size: 3.5rem;
+  line-height: 1.1;
 }
 
 .hero p:not(.eyebrow),
 .page-intro > p:last-child {
   max-width: 620px;
-  color: var(--brown-light);
-  font-size: 1.18rem;
+  color: #795342;
+  font-size: 1.15rem;
 }
 
 .hero-image {
   width: 100%;
   border-radius: 18px;
-  box-shadow: var(--shadow);
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: 1.7rem;
+  gap: 12px;
+  margin-top: 27px;
 }
 
 .button {
   display: inline-block;
-  padding: .75rem 1.1rem;
-  background: var(--orange-dark);
+  padding: 12px 18px;
+  background: #9e3f18;
   color: #fff;
+  border: 1px solid #9e3f18;
   border-radius: 6px;
   text-decoration: none;
   font-family: Arial, sans-serif;
@@ -176,90 +146,93 @@ img {
 }
 
 .button:hover {
-  background: var(--orange-dark);
+  background: #4a2b20;
+  border-color: #4a2b20;
 }
 
 .button-secondary {
-  background: transparent;
-  color: var(--orange-dark);
-  border: 1px solid var(--orange);
+  background: #fffdf8;
+  color: #9e3f18;
+}
+
+.button-secondary:hover {
+  color: #fff;
 }
 
 .callout {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding-block: 4rem;
+  gap: 32px;
+  padding: 64px 0;
 }
 
 .text-link {
-  color: var(--orange-dark);
+  color: #9e3f18;
   font-weight: bold;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .text-link:hover {
   text-decoration: underline;
 }
 
-/* 5. Secções, títulos e cartões */
+/* Secções, títulos e cartões */
 .warm-section {
-  padding-block: 4rem;
-  background: var(--cream);
+  padding: 64px 0;
+  background: #fff8eb;
 }
 
 h2 {
-  margin: .2rem 0 1.4rem;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  line-height: 1.15;
+  margin: 4px 0 22px;
+  font-size: 2.2rem;
+  line-height: 1.2;
 }
 
 h3 {
-  margin-bottom: .35rem;
+  margin-bottom: 6px;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .card {
-  overflow: hidden;
-  background: var(--paper);
-  border: 1px solid var(--line);
+  background: #fffdf8;
+  border: 1px solid #ead8c0;
   border-radius: 12px;
-  box-shadow: 0 5px 16px rgba(74, 43, 32, .05);
 }
 
 .card img {
   width: 100%;
   height: 170px;
   object-fit: cover;
+  border-radius: 12px 12px 0 0;
 }
 
 .card h3,
 .card p {
-  margin-inline: 1.1rem;
+  margin-right: 18px;
+  margin-left: 18px;
 }
 
 .card p {
-  color: var(--brown-light);
+  color: #795342;
 }
 
-/* 6. Páginas interiores, menu e história */
+/* Páginas interiores, menu e história */
 .page-intro {
-  padding-block: 4rem 3rem;
+  padding: 64px 0 48px;
 }
 
 .page-intro h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: 3.2rem;
 }
 
 .menu-section {
-  padding-bottom: 4rem;
+  padding-bottom: 64px;
 }
 
 .table-wrapper {
@@ -269,27 +242,26 @@ h3 {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  background: #fffdf8;
+  border: 1px solid #ead8c0;
 }
 
 caption {
-  padding: 1rem 0;
-  color: var(--brown-light);
+  padding: 16px 0;
+  color: #795342;
   text-align: left;
   font-style: italic;
 }
 
 th,
 td {
-  padding: 1rem;
+  padding: 16px;
   text-align: left;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #ead8c0;
 }
 
 thead {
-  background: var(--brown);
+  background: #4a2b20;
   color: #fff;
 }
 
@@ -308,29 +280,61 @@ tbody tr:last-child td {
 }
 
 tbody tr:nth-child(even) {
-  background: var(--cream);
+  background: #fff8eb;
 }
 
 .note {
-  color: var(--brown-light);
+  color: #795342;
   font-size: .9rem;
+}
+
+.menu-note {
+  margin-top: 16px;
+  padding: 13px 16px;
+  border: 1px solid #ead8c0;
+  background: #fff8eb;
+}
+
+.menu-note summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-note p {
+  margin-bottom: 0;
+}
+
+.menu-figure {
+  margin: 0;
+}
+
+.menu-figure figcaption {
+  margin-top: 10px;
+  color: #795342;
+  font-size: .9rem;
+  text-align: center;
+}
+
+mark {
+  padding: 2px 4px;
+  background: #f5d58d;
+  color: #4a2b20;
 }
 
 .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 40px;
   align-items: center;
 }
 
 .section-image {
   width: 100%;
   border-radius: 14px;
-  box-shadow: var(--shadow);
 }
 
 .story {
-  padding-bottom: 4rem;
+  padding-bottom: 64px;
 }
 
 .story h2 {
@@ -338,15 +342,15 @@ tbody tr:nth-child(even) {
 }
 
 .values-list {
-  padding-left: 1.2rem;
+  padding-left: 20px;
 }
 
 .values-list li {
-  margin-bottom: .5rem;
+  margin-bottom: 8px;
 }
 
 address {
-  margin: 1rem 0;
+  margin: 16px 0;
   font-style: normal;
 }
 
@@ -354,11 +358,11 @@ address {
   min-height: 260px;
 }
 
-/* 7. Rodapé */
+/* Rodapé */
 .site-footer {
-  padding-block: 2rem;
-  background: var(--brown);
-  color: var(--cream);
+  padding: 32px 0;
+  background: #4a2b20;
+  color: #fff8eb;
   font-size: .9rem;
 }
 
@@ -367,34 +371,34 @@ address {
 }
 
 .site-footer a {
-  color: var(--cream);
+  color: #fff8eb;
 }
 
-/* 8. Formulário e conteúdo de acessibilidade */
+/* Formulário e conteúdo de acessibilidade */
 .form-section,
 .accessibility-content {
-  padding-bottom: 4rem;
+  padding-bottom: 64px;
 }
 
 .form-section > p,
 .form-note {
-  color: var(--brown-light);
+  color: #795342;
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 
 .form-field {
   display: grid;
-  gap: .4rem;
-  margin-bottom: 1.2rem;
+  gap: 6px;
+  margin-bottom: 18px;
 }
 
 .form-field-wide {
-  grid-column: 1 / -1;
+  grid-column: 1 / 3;
 }
 
 .form-field label,
@@ -407,11 +411,11 @@ fieldset legend {
 .form-field textarea {
   width: 100%;
   min-height: 46px;
-  padding: .7rem .8rem;
-  border: 1px solid var(--brown-light);
+  padding: 11px 13px;
+  border: 1px solid #795342;
   border-radius: 6px;
-  background: var(--paper);
-  color: var(--brown);
+  background: #fffdf8;
+  color: #4a2b20;
   font: inherit;
 }
 
@@ -420,77 +424,86 @@ fieldset legend {
 }
 
 .form-field small {
-  color: var(--brown-light);
+  color: #795342;
   font-size: .9rem;
 }
 
 fieldset {
-  margin: 0 0 1.2rem;
-  padding: 1rem;
-  border: 1px solid var(--line);
+  margin: 0 0 18px;
+  padding: 16px;
+  border: 1px solid #ead8c0;
   border-radius: 8px;
 }
 
 fieldset legend {
-  padding-inline: .35rem;
+  padding: 0 6px;
 }
 
 .choice-list {
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem 1.5rem;
+  gap: 12px 24px;
 }
 
 .choice-list label {
   display: inline-flex;
   align-items: center;
-  gap: .45rem;
+  gap: 7px;
 }
 
 .choice-list input {
-  width: 1.1rem;
-  height: 1.1rem;
-  accent-color: var(--orange-dark);
+  width: 18px;
+  height: 18px;
 }
 
 .accessibility-content li {
-  margin-bottom: .65rem;
+  margin-bottom: 10px;
 }
 
-/* 9. Foco de teclado e acessibilidade visual */
-:focus-visible {
-  outline: 3px solid var(--orange-dark);
+/* Foco visível para navegação com teclado */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+summary:focus {
+  outline: 3px solid #9e3f18;
   outline-offset: 3px;
 }
 
-.site-footer a:focus-visible {
-  outline-color: var(--gold);
+.site-footer a:focus {
+  outline-color: #e7a642;
 }
 
-/* 10. Adaptações para ecrãs estreitos */
+/* Ecrãs estreitos: as colunas passam a uma coluna */
 @media (max-width: 700px) {
   .header-content {
     align-items: flex-start;
     flex-direction: column;
-    padding-block: 1rem;
+    padding: 16px 0;
   }
 
   .nav-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    gap: .25rem;
+    gap: 4px;
   }
 
   .nav-list a {
-    padding: .45rem .55rem;
+    padding: 8px;
     font-size: .92rem;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-block: 3rem;
+    gap: 24px;
+    padding: 48px 0;
+  }
+
+  .hero h1,
+  .page-intro h1 {
+    font-size: 2.5rem;
   }
 
   .hero-image {
@@ -498,12 +511,17 @@ fieldset legend {
   }
 
   .card-grid,
-  .two-columns {
+  .two-columns,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
   .card-grid {
-    gap: 1rem;
+    gap: 16px;
+  }
+
+  .form-field-wide {
+    grid-column: 1;
   }
 
   .callout,
@@ -513,47 +531,29 @@ fieldset legend {
   }
 
   .callout {
-    padding-block: 3rem;
+    padding: 48px 0;
   }
 
   .page-intro {
-    padding-block: 3rem 2rem;
+    padding: 48px 0 32px;
   }
 
   .warm-section {
-    padding-block: 3rem;
+    padding: 48px 0;
+  }
+
+  .form-section,
+  .accessibility-content {
+    padding-bottom: 48px;
   }
 
   th,
   td {
-    padding: .75rem;
+    padding: 12px;
     font-size: .94rem;
   }
 
   .brand {
     font-size: 1rem;
-  }
-}
-
-/* 11. Ajustes de formulário e acessibilidade para ecrãs estreitos */
-@media (max-width: 700px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-field-wide {
-    grid-column: auto;
-  }
-
-  .form-section,
-  .accessibility-content {
-    padding-bottom: 3rem;
-  }
-}
-
-/* Mantém a identidade sem animação para quem reduz movimento. */
-@media (prefers-reduced-motion: reduce) {
-  .brand-mark {
-    transition: none;
   }
 }
