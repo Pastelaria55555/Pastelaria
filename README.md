@@ -25,8 +25,29 @@ que apresente os produtos e a identidade da Pastelaria Crumbly.
 - menu.html — produtos e preços
 - sobre.html — apresentação da pastelaria
 
+## Trabalho realizado por entrega
+
+### E2 — Planeamento e formulários
+- Foram acrescentadas as páginas `contactos.html` e `acessibilidade.html` e criada uma navegação comum nas cinco páginas.
+- O formulário demonstrativo usa controlos HTML e validação nativa do navegador; não envia nem guarda dados.
+- O planeamento e os testes estão descritos em [`docs/planeamento-E2.md`](docs/planeamento-E2.md) e [`docs/checklist-E2.md`](docs/checklist-E2.md).
+
+### E3 — CSS base e validação
+- As cinco páginas usam a folha de estilos externa `css/style.css`.
+- Foram documentados a identidade visual e o contraste em [`docs/guia-estilo.md`](docs/guia-estilo.md) e os resultados de validação em [`docs/relatorio-validacao-E3.md`](docs/relatorio-validacao-E3.md).
+
+### E4 — Modelo de caixa e layout
+- O CSS usa regras de box model e layout responsivo, com estilos coerentes para tabelas e formulário.
+- Foram acrescentados elementos HTML5, um artigo e documentação de teste de teclado em [`docs/checklist-E4.md`](docs/checklist-E4.md) e [`docs/artigo-E4/artigo.md`](docs/artigo-E4/artigo.md).
+
+### E5 — Design responsivo
+- O layout segue uma abordagem mobile-first, com três pontos de rutura, navegação flexível e grelha de conteúdos.
+- Foram verificadas as cinco páginas a 360 px e 1280 px; as capturas estão em [`docs/responsivo/`](docs/responsivo/README.md).
+- As imagens de conteúdo adaptam-se à largura do ecrã e os controlos principais têm áreas de toque com pelo menos 24 × 24 px.
+
 ## Tecnologias
-- HTML
+- HTML5
 - CSS
-- JavaScript
 - Git e GitHub
+
+O projeto não usa JavaScript, frameworks, bases de dados nem código de servidor.

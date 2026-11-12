@@ -6,7 +6,7 @@
 - [x] Tabelas e formulário têm espaçamentos, bordas, cores e larguras coerentes com o guia de estilo.
 - [x] Foram usados elementos HTML5 adicionais com propósito: `mark`, `details`, `summary`, `figure`, `figcaption` e `time`.
 - [x] Artigo criado em [artigo.md](./artigo-E4/artigo.md), com tema, questão orientadora, índice e oito referências com URL e data de acesso.
-- [x] O foco de teclado é visível através de `:focus-visible` e a ordem natural de tabulação é mantida.
+- [x] O foco de teclado é visível através de `:focus` e a ordem natural de tabulação é mantida.
 
 ## Evidências e verificação
 
