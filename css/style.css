@@ -20,7 +20,17 @@ img,
 
 .container {
   width: 92%;
+  max-width: 100%;
+  min-width: 0;
   margin: 0 auto;
+}
+
+main,
+section,
+article,
+figure,
+nav {
+  max-width: 100%;
 }
 
 /* No telemóvel o cabeçalho e a navegação podem ocupar várias linhas. */
@@ -35,6 +45,16 @@ img,
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+}
+
+.header-content > *,
+.footer-content > *,
+.hero > *,
+.callout > *,
+.card-grid > *,
+.two-columns > *,
+.form-grid > * {
+  min-width: 0;
 }
 
 .header-content {
@@ -69,6 +89,8 @@ img,
 .nav-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 0;
   gap: 4px;
   list-style: none;
   margin: 0;
@@ -94,7 +116,8 @@ img,
 /* Os conteúdos começam em uma coluna, adequada a ecrãs pequenos. */
 .hero {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
   gap: 24px;
   align-items: center;
   padding: 40px 0;
@@ -112,14 +135,20 @@ img,
 
 .hero h1,
 .page-intro h1 {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   max-width: 650px;
   margin: 0 0 16px;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
+  overflow-wrap: anywhere;
   line-height: 1.1;
 }
 
 .hero p:not(.eyebrow),
 .page-intro > p:last-child {
+  width: 100%;
+  min-width: 0;
   max-width: 620px;
   color: #795342;
   font-size: 1.05rem;
@@ -133,6 +162,7 @@ img,
 .button-row {
   display: flex;
   flex-wrap: wrap;
+  min-width: 0;
   gap: 10px;
   margin-top: 24px;
 }
@@ -149,6 +179,7 @@ img,
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-weight: bold;
+  overflow-wrap: anywhere;
 }
 
 .button:hover {
@@ -203,7 +234,7 @@ h3 {
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
@@ -243,14 +274,27 @@ h3 {
 
 .table-wrapper {
   max-width: 100%;
-  overflow-x: auto;
+  min-width: 0;
+  overflow-x: visible;
 }
 
 table {
   width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   background: #fffdf8;
   border: 1px solid #ead8c0;
+}
+
+table th:first-child,
+table td:first-child {
+  width: 38%;
+}
+
+table th:last-child,
+table td:last-child {
+  width: 20%;
 }
 
 caption {
@@ -262,9 +306,10 @@ caption {
 
 th,
 td {
-  padding: 12px;
+  padding: 7px 5px;
   text-align: left;
   border-bottom: 1px solid #ead8c0;
+  overflow-wrap: anywhere;
 }
 
 thead {
@@ -274,7 +319,7 @@ thead {
 
 thead th {
   font-family: Arial, sans-serif;
-  font-size: .9rem;
+  font-size: .78rem;
 }
 
 tbody th {
@@ -332,7 +377,7 @@ mark {
 
 .two-columns {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
   align-items: center;
 }
@@ -428,6 +473,75 @@ fieldset legend {
   font: inherit;
 }
 
+@media (max-width: 420px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+
+  .hero,
+  .warm-section > .container,
+  .page-intro.container,
+  .menu-section.container,
+  .story.container,
+  .form-section.container,
+  .accessibility-content.container {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .hero-copy,
+  .card,
+  .callout > *,
+  .two-columns > *,
+  .form-grid > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-image,
+  .section-image,
+  .card img,
+  table {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-list {
+    gap: 2px;
+  }
+
+  .nav-list a {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .hero h1,
+  .page-intro h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero,
+  .page-intro {
+    padding-top: 32px;
+  }
+
+  th,
+  td {
+    padding: 6px 4px;
+    font-size: .82rem;
+  }
+}
+
 .form-field textarea {
   resize: vertical;
 }
@@ -506,7 +620,7 @@ summary:focus {
   }
 
   .hero {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 28px;
     padding: 56px 0;
   }
@@ -519,7 +633,7 @@ summary:focus {
   .card-grid,
   .two-columns,
   .form-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .form-field-wide {
@@ -563,7 +677,7 @@ summary:focus {
   }
 
   .card-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .warm-section,
@@ -580,6 +694,6 @@ summary:focus {
   }
 
   .hero {
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
   }
 }
