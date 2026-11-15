@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Consulte o menu da Pastelaria Crumbly, com pão, pastelaria, bebidas e preços.">
     <title>Menu | Pastelaria Crumbly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
   </head>
   <body>
     <header class="site-header">
@@ -15,9 +17,6 @@
         </span><span>Pastelaria <strong>Crumbly</strong></span></a>
         <nav aria-label="Navegação principal">
           <ul class="nav-list">
-            <li>
-              <a href="index.html">Início</a>
-            </li>
             <li>
               <a class="active" href="menu.html" aria-current="page">Menu</a>
             </li>
@@ -50,11 +49,16 @@
         <h2 id="menu-titulo">
           Produtos e preços
         </h2>
+        <div class="alert alert-warning" role="note">
+          Este menu é demonstrativo e foi criado para o trabalho académico.
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-xl-7">
         <h3>
           Padaria, pastelaria e refeições
         </h3>
         <div class="table-wrapper">
-          <table>
+          <table class="table table-striped align-middle">
             <caption>
               Produtos disponíveis na Pastelaria Crumbly
             </caption>
@@ -207,11 +211,13 @@
             </tbody>
           </table>
         </div>
+          </div>
+          <div class="col-12 col-xl-5">
         <h3>
           Bebidas
         </h3>
         <div class="table-wrapper">
-          <table>
+          <table class="table table-striped align-middle">
             <caption>
               Bebidas disponíveis na Pastelaria Crumbly
             </caption>
@@ -341,6 +347,8 @@
               </tr>
             </tbody>
           </table>
+        </div>
+          </div>
         </div>
         <details class="menu-note">
           <summary>Nota sobre os preços</summary>

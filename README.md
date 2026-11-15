@@ -45,9 +45,15 @@ que apresente os produtos e a identidade da Pastelaria Crumbly.
 - Foram verificadas as cinco páginas a 360 px e 1280 px; as capturas estão em [`docs/responsivo/`](docs/responsivo/README.md).
 - As imagens de conteúdo adaptam-se à largura do ecrã e os controlos principais têm áreas de toque com pelo menos 24 × 24 px.
 
+### E6 — Bootstrap e auditoria inicial
+- O Bootstrap CSS 5.3.9 é carregado por CDN; a paleta e os componentes são personalizados em `css/bootstrap-custom.css`, sem alterar os ficheiros do framework.
+- A grelha Bootstrap está integrada nas páginas inicial e menu. Os componentes usados nesta etapa são cartões, botões, alerta, badge e tabelas.
+- A primeira versão do artigo está em [`docs/artigo-E6/artigo-v1.md`](docs/artigo-E6/artigo-v1.md); o relatório em [`docs/relatorio-auditoria-E6.md`](docs/relatorio-auditoria-E6.md) regista os resultados Lighthouse e WAVE após as correções nas três páginas auditadas. As capturas Lighthouse são em modo Mobile e o WAVE reporta zero alertas.
+
 ## Tecnologias
 - HTML5
 - CSS
+- Bootstrap CSS 5.3.9, carregado por CDN e personalizado em `css/bootstrap-custom.css`
 - Git e GitHub
 
-O projeto não usa JavaScript, frameworks, bases de dados nem código de servidor.
+O projeto continua sem JavaScript próprio, bases de dados ou código de servidor. Nesta primeira etapa da E6, o Bootstrap é usado apenas como framework CSS.

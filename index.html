@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Conheça alguns produtos e bebidas do menu da Pastelaria Crumbly.">
     <title>Início | Pastelaria Crumbly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
   </head>
   <body>
     <header class="site-header">
       <div class="container header-content">
-        <a class="brand" href="index.html" aria-label="Pastelaria Crumbly — página inicial"><span class="brand-mark" aria-hidden="true">
+        <a class="brand" href="index.html" aria-label="Pastelaria Crumbly — página inicial" aria-current="page"><span class="brand-mark" aria-hidden="true">
         <img src="images/cookie.svg" alt="">
         </span><span>Pastelaria <strong>Crumbly</strong></span></a>
         <nav aria-label="Navegação principal">
           <ul class="nav-list">
-            <li>
-              <a class="active" href="index.html" aria-current="page">Início</a>
-            </li>
             <li>
               <a href="menu.html">Menu</a>
             </li>
@@ -39,6 +38,7 @@
         <div class="hero-copy">
           <p class="eyebrow">
             Desde 1987 · Tradição portuguesa
+            <span class="badge rounded-pill text-bg-primary">Forno diário</span>
           </p>
           <h1 id="titulo-principal">
             O sabor de chegar a casa.
@@ -47,7 +47,7 @@
             Na Pastelaria Crumbly encontra pão fresco, bolos e pastelaria para acompanhar com café, galão ou uma bebida fresca. <mark>Fornadas frescas todos os dias.</mark>
           </p>
           <div class="button-row">
-            <a class="button" href="menu.html">Ver o nosso menu</a><a class="button button-secondary" href="sobre.html">Conhecer a nossa história</a>
+            <a class="button btn btn-primary" href="menu.html">Ver o nosso menu</a><a class="button button-secondary btn btn-outline-primary" href="sobre.html">Conhecer a nossa história</a>
           </div>
         </div>
         <img class="responsive-image hero-image" src="images/pao-artesanal.svg" alt="Pão artesanal dourado acabado de sair do forno">
@@ -60,34 +60,34 @@
           <h2 id="destaques-titulo">
             Pequenos prazeres, todos os dias
           </h2>
-          <div class="card-grid">
-            <article class="card">
-              <img class="responsive-image" src="images/pastel-de-nata.svg" alt="Ilustração de um pastel de nata">
-              <h3>
-                Pastelaria do balcão
-              </h3>
-              <p>
-                Pastel de nata por 1,10 €, mil-folhas por 1,50 €, queijada de laranja por 0,70 €, croissant por 1,20 € e cookies de chocolate por 1,20 €.
-              </p>
-            </article>
-            <article class="card">
-              <img class="responsive-image" src="images/bolo-caseiro.svg" alt="Ilustração de uma fatia de bolo caseiro">
-              <h3>
-                Bolos e fatias
-              </h3>
-              <p>
-                Bolo de cenoura com cobertura de chocolate por 2,20 €, bolo de arroz por 1,60 €, banana bread por 1,10 € e tarte de maçã por 1,80 €.
-              </p>
-            </article>
-            <article class="card">
-              <img class="responsive-image" src="images/cafe.svg" alt="Ilustração de uma chávena de café">
-              <h3>
-                Bebidas
-              </h3>
-              <p>
-                Café por 1,00 € e galão por 1,60 €. Também temos meia de leite, Compal, Sumol, Coca-Cola, Ice Tea, água e Monster.
-              </p>
-            </article>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100">
+                <img class="responsive-image" src="images/pastel-de-nata.svg" alt="Ilustração de um pastel de nata">
+                <div class="card-body">
+                  <h3 class="card-title">Pastelaria do balcão</h3>
+                  <p class="card-text">Pastel de nata por 1,10 €, mil-folhas por 1,50 €, queijada de laranja por 0,70 €, croissant por 1,20 € e cookies de chocolate por 1,20 €.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100">
+                <img class="responsive-image" src="images/bolo-caseiro.svg" alt="Ilustração de uma fatia de bolo caseiro">
+                <div class="card-body">
+                  <h3 class="card-title">Bolos e fatias</h3>
+                  <p class="card-text">Bolo de cenoura com cobertura de chocolate por 2,20 €, bolo de arroz por 1,60 €, banana bread por 1,10 € e tarte de maçã por 1,80 €.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100">
+                <img class="responsive-image" src="images/cafe.svg" alt="Ilustração de uma chávena de café">
+                <div class="card-body">
+                  <h3 class="card-title">Bebidas</h3>
+                  <p class="card-text">Café por 1,00 € e galão por 1,60 €. Também temos meia de leite, Compal, Sumol, Coca-Cola, Ice Tea, água e Monster.</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>

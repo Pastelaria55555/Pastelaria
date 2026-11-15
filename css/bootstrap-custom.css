@@ -1,0 +1,59 @@
+/* Personalizações de tema do Bootstrap para a Pastelaria Crumbly. */
+:root {
+  --bs-primary: #9e3f18;
+  --bs-primary-rgb: 158, 63, 24;
+  --bs-secondary: #4a2b20;
+  --bs-secondary-rgb: 74, 43, 32;
+  --bs-body-bg: #fffdf8;
+  --bs-body-color: #4a2b20;
+  --bs-body-font-family: Georgia, 'Times New Roman', serif;
+  --bs-border-color: #ead8c0;
+  --bs-border-radius: 0.75rem;
+}
+
+/* O Reboot do Bootstrap torna os títulos mais leves; mantemos a tipografia original. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+/* Repõe o tamanho próximo do padrão anterior para os títulos de nível 3. */
+h3 {
+  font-size: 1.17em;
+}
+
+/* Cores dos botões Bootstrap alinhadas com a identidade da pastelaria. */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9e3f18;
+  --bs-btn-border-color: #9e3f18;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4a2b20;
+  --bs-btn-hover-border-color: #4a2b20;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #9e3f18;
+  --bs-btn-border-color: #9e3f18;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #9e3f18;
+  --bs-btn-hover-border-color: #9e3f18;
+}
+
+/* Evita que a badge herde um tamanho demasiado pequeno do texto eyebrow. */
+.hero-copy .eyebrow .badge {
+  font-size: 0.8rem;
+}
+
+/* Alerta informativo com os tons quentes já usados no projeto. */
+.alert-warning {
+  --bs-alert-color: #4a2b20;
+  --bs-alert-bg: #fff8eb;
+  --bs-alert-border-color: #ead8c0;
+}
