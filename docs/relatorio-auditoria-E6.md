@@ -36,9 +36,9 @@ Na análise WAVE anterior, foram identificados: **“Redundant link”** para �
 
 | Página | Observações confirmadas nesta inspeção |
 | --- | --- |
-| `index.html` | Um H1; cinco imagens carregadas; todas têm `alt` (a imagem decorativa do logótipo tem `alt` vazio e está dentro de um elemento `aria-hidden`); numa observação anterior, o logótipo recebeu foco visível. A repetição atual do teste com `Tab` não foi conclusiva, pois o navegador de teste manteve o foco no `body`; sem overflow horizontal observado a 360 px e 1280 px. |
-| `menu.html` | Um H1; duas imagens carregadas e com `alt`; duas tabelas expostas como tabelas, com legenda e cabeçalhos de coluna identificados; a observação anterior indicava foco no logótipo com `Tab`, mas não foi possível repetir conclusivamente a passagem completa agora; sem overflow horizontal observado a 360 px e 1280 px. |
-| `sobre.html` | Um H1; três imagens carregadas e com `alt`; a observação anterior indicava foco no logótipo com `Tab`, mas não foi possível repetir conclusivamente a passagem completa agora; sem overflow horizontal observado a 360 px e 1280 px. |
+| `index.html` | Um H1; cinco imagens carregadas; todas têm `alt` (a imagem decorativa do logótipo tem `alt` vazio e está dentro de um elemento `aria-hidden`); teste manual de teclado confirmado pelo utilizador: navegação com `Tab`/`Shift+Tab` e foco visível; sem overflow horizontal observado a 360 px e 1280 px. |
+| `menu.html` | Um H1; duas imagens carregadas e com `alt`; duas tabelas expostas como tabelas, com legenda e cabeçalhos de coluna identificados; teste manual de teclado confirmado pelo utilizador: navegação com `Tab`/`Shift+Tab` e foco visível; sem overflow horizontal observado a 360 px e 1280 px. |
+| `sobre.html` | Um H1; três imagens carregadas e com `alt`; teste manual de teclado confirmado pelo utilizador: navegação com `Tab`/`Shift+Tab` e foco visível; sem overflow horizontal observado a 360 px e 1280 px. |
 
 Na verificação local, as páginas HTML, folhas de estilo e destinos internos observados existem. Isto confirma apenas a existência dos caminhos verificados; não é uma avaliação geral de qualidade ou acessibilidade.
 
@@ -47,9 +47,9 @@ Na verificação local, as páginas HTML, folhas de estilo e destinos internos o
 | Problema / estado | Prioridade | Plano |
 | --- | --- | --- |
 | A ligação “Início” era assinalada como “Redundant link” e o texto “Forno diário” era assinalado como demasiado pequeno. | Corrigido e verificado no WAVE | A navegação foi simplificada nas cinco páginas e a badge aumentada para `0.8rem`. A nova análise WAVE mostra 0 alertas nas três páginas testadas. |
-| A repetição atual do teste de teclado não foi conclusiva no navegador de teste. | Pendente de confirmação manual | No navegador do utilizador, percorrer cada página com `Tab` e `Shift+Tab`, confirmar o contorno visível, ativar ligações com `Enter` e testar o controlo `details` do menu com teclado. Registar o resultado após observação direta. |
+| A repetição automatizada do teste de teclado não foi conclusiva no navegador de teste. | Confirmado manualmente pelo utilizador | O utilizador confirmou a navegação por teclado e o foco visível nas três páginas. As ferramentas automáticas e o navegador de teste não substituem esta verificação manual. |
 
 ## Próximos passos
 
 1. Manter as capturas atuais de Lighthouse e WAVE como evidência das páginas corrigidas.
-2. Completar a confirmação manual de teclado no navegador do utilizador; as ferramentas automáticas não substituem este teste.
+2. A confirmação manual do teste de teclado foi comunicada pelo utilizador; conservar este registo juntamente com as capturas automáticas.
